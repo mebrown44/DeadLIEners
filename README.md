@@ -18,6 +18,6 @@ This is an app (website for demo) that allows the user to input their schedule a
   - Appealing but not too distracting
   - Not too many gimmicks
 - App Demo (Erika)
-- Research on Procrastination (For marketing)
+- Research on Procrastination (For marketing) (Gabby)
 - Marketing/Presentation (Erika, Abby)
-- Devpost
+- Devpost (Gabby)
