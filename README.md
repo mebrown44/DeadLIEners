@@ -1,23 +1,23 @@
-## DeadLIEner
+# DeadLIEner
 Margo Brown, Gabriella Flynn, Abigail Koss, and Erika Roa
 
-# Premise:
+### Premise:
 This is an app (website for demo) that allows the user to input their schedule and deadlines, and then LIES to the user, setting their deadlines a random amount earlier to convince them they have to start working earlier.
 
-# Responsibilities:
+### Responsibilities:
 - Creating the website (front-end, back-end)
-  - Export to calender
-  - Send notifications (alarms?)
+  - Export to calender (Abby)
+  - Send notifications (alarms?) (Abby)
   - Account based (personalization? [can only do it if nothing is currently due])
   - Pages:
     - Front page
     - Calendar
       - Add events/assignments
     - About Us
-- Design
-  - Appealing but not too distractig
+- Design (Erika)
+  - Appealing but not too distracting
   - Not too many gimmicks
-- App Demo
+- App Demo (Erika)
 - Research on Procrastination (For marketing)
-- Marketing/Presentation
+- Marketing/Presentation (Erika, Abby)
 - Devpost
