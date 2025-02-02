@@ -51,12 +51,13 @@
                 flex: 1;
                 padding: 20px;
                 text-align: center;
+                align-items: center;
+                display: flex;
+                flex-direction:column;
             }
             form {
-                background-color: #DDCBCA;
                 padding: 20px;
-                border-radius: 10px;
-                border: 2px solid #352431; 
+                border: none; 
                 display: inline-block;
                 text-align: center;
                 width: 100%;
@@ -102,6 +103,11 @@
                 font-weight:500;
                 color: #231F20;
             }
+            iframe{
+                padding:15px;
+                margin-top: 10px;
+                border: none;
+            }
         </style>
     </head>
 
@@ -121,7 +127,7 @@
 
         <main>
             <h1>Tasks Calendar</h1>
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&showTitle=0&showTz=0&src=Y181MjcyN2Y3ZjYzYTc4ZGJiNDhhNjIxNTZmOWRjNTlmNGI5YTY5ZTJlODE0Y2M4MjJhZTgzNDhhNDY3NmNhMDIxQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y19kOTdhZmVkMDAyMzA0ZTBiYzdjMGU2YjVlMzg0MGE4YzUxZmRkYjVhMGNmMDlhYWEyZDVlOTQwZWFjODE3YTYzQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y180NWM3YjEwZGIxMTFjOGMzYTMyNGIwMGMyOGE3YjQ1YWFlMTljZWY4N2ZiMzZmNzE3NmNkOWY5MDhhNTk5YmMzQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23b50b44&color=%23352431&color=%23c38668" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&showTitle=0&showTz=0&src=Y181MjcyN2Y3ZjYzYTc4ZGJiNDhhNjIxNTZmOWRjNTlmNGI5YTY5ZTJlODE0Y2M4MjJhZTgzNDhhNDY3NmNhMDIxQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y19kOTdhZmVkMDAyMzA0ZTBiYzdjMGU2YjVlMzg0MGE4YzUxZmRkYjVhMGNmMDlhYWEyZDVlOTQwZWFjODE3YTYzQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y180NWM3YjEwZGIxMTFjOGMzYTMyNGIwMGMyOGE3YjQ1YWFlMTljZWY4N2ZiMzZmNzE3NmNkOWY5MDhhNTk5YmMzQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23b50b44&color=%23352431&color=%23c38668" width="800" height="600" frameborder="0" scrolling="no"></iframe>
             <form action="" method="post">
                 <input type="submit" value="Test">
             </form>
