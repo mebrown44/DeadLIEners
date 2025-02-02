@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title> DeadLIEner - Log In</title>
+        <style>
+            html, body {
+                height: 100%; /* Ensure the body and html fill the viewport */
+                margin: 0; /* Remove default margin */
+            }
+            body{
+                margin: 0;
+                display: flex;
+                flex-direction:column;
+                font-family: 'Calibri', sans-serif;
+                background-color: #af6a6a;
+                color: #231F20;
+
+            }
+            header, footer{
+                background-color:#DDCBCA;
+                color: #231F20;
+            }
+            header{
+                display:flex;
+                justify-content: center;
+                align-items:center;
+                padding: 40px;
+            }
+            header img{
+                max-width: 75%;
+                height: auto;
+            }
+            nav {
+                background-color: #352431;
+                padding: 10px;
+                text-align: center;
+            }
+            nav a {
+                margin: 0 15px; 
+                color: #DDCBCA;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            nav a:hover {
+                color: #af6a6a;
+            }
+            main {
+                flex: 1;
+                padding: 20px;
+                text-align: center;
+            }
+            form {
+                background-color: #DDCBCA;
+                padding: 20px;
+                border-radius: 10px;
+                border: 2px solid #352431; 
+                display: inline-block;
+                text-align: center;
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
+                font-family: 'Calibri', sans-serif;
+            }
+            h1{
+                font-size:40px;
+                font-weight:900;
+            }
+            p{
+                font-size: 20px;
+                font-weight:500;
+                color: #231F20;
+            }
+            form input[type="text"] {
+                width: 95%;               
+                padding: 15px;             
+                margin: 10px 0;            
+                border-radius: 8px;        
+                border: 2px solid #352431; 
+                font-size: 1.1em;          
+            }
+            form input[type="submit"] {
+                width: 100%;
+                padding: 15px;
+                margin-top: 10px;
+                background-color: #352431;
+                color: #DDCBCA;
+                border: none;
+                border-radius: 8px;
+                font-size: 1.2em;
+                cursor: pointer;
+            }
+            footer{
+                text-align: center;
+                padding: 15px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <img src="" alt = "DeadLIEner Logo">
+        </header>
+
+        <nav>
+            <a href="mainPage.html">Home</a>
+            <a href="calenderPage.html">Calender</a>
+            <a href="signUp.html">Sign Up</a>
+            <a href="aboutUs.html">About Us</a>
+        </nav>
+
+        <main>
+            <form action="calenderPage.html" method="post">
+                <h1>Log In</h1>
+                <p>Enter a valid email address and your 4-digit pin number:</p>
+                <input type="text" name="username" placeholder="Enter Your Email" required>
+                <input type="text" name="passkey" placeholder="Enter Your Pin" required>
+                <input type="submit" value="Sign Up">
+
+            </form>
+        </main>
+
+        <footer>
+            <p>© 2025 DeadLIEner. All rights reserved.</p> <!-- p is a paragraph -->
+        </footer>
+    </body>
+</html>
