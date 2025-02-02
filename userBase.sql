@@ -25,7 +25,7 @@ END
 $$;
 
 CREATE OR REPLACE FUNCTION retrieveUser(username Text, passkey varChar(4))
-RETURNS BOOLEAN
+RETURNS Event[]
 LANGUAGE plpgsql
 AS $$
 BEGIN
