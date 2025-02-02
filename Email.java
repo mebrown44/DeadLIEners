@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Email {
     private String user;
     private String domain;
@@ -31,7 +29,7 @@ public class Email {
     //Make sure email is valid, check if has valid domain
     public boolean validEmail(String s){
         
-        String specialChars = "!#$%&'()*+,-/:;<=>?[]^_`{|}~";
+        String specialChars = "!#$%&'()*+,-/:;<=>?[]^_`{|}~ ";
 
         if(!(s.contains("@") && s.contains(".")))
         {

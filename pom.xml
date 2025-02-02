@@ -1,0 +1,8 @@
+<dependencies>
+    <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>4.0.1</version> <!-- You can change the version to match your requirements -->
+        <scope>provided</scope>
+    </dependency>
+</dependencies>

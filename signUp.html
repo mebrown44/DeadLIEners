@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title> DeadLIEner - Log In</title>
+        <style>
+            html, body {
+                height: 100%; /* Ensure the body and html fill the viewport */
+                margin: 0; /* Remove default margin */
+            }
+            body{
+                margin: 0;
+                display: flex;
+                flex-direction:column;
+                font-family: 'Calibri', sans-serif;
+                background-color: #af6a6a;
+                color: #231F20;
+
+            }
+            header, footer{
+                background-color:#DDCBCA;
+                color: #231F20;
+            }
+            header{
+                display:flex;
+                justify-content: center;
+                align-items:center;
+                padding: 40px;
+            }
+            header img{
+                max-width: 30%;
+                height: auto;
+            }
+            nav {
+                background-color: #352431;
+                padding: 10px;
+                text-align: center;
+            }
+            nav a {
+                margin: 0 15px; 
+                color: #DDCBCA;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            nav a:hover {
+                color: #af6a6a;
+            }
+            main {
+                flex: 1;
+                padding: 20px;
+                text-align: center;
+            }
+            form {
+                background-color: #DDCBCA;
+                padding: 20px;
+                border-radius: 10px;
+                border: 2px solid #352431; 
+                display: inline-block;
+                text-align: center;
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
+                font-family: 'Calibri', sans-serif;
+            }
+            h1{
+                font-size:40px;
+                font-weight:900;
+            }
+            p{
+                font-size: 20px;
+                font-weight:500;
+                color: #231F20;
+            }
+            form input[type="text"] {
+                width: 95%;               
+                padding: 15px;             
+                margin: 10px 0;            
+                border-radius: 8px;        
+                border: 2px solid #352431; 
+                font-size: 1.1em;          
+            }
+            form input[type="submit"] {
+                width: 100%;
+                padding: 15px;
+                margin-top: 10px;
+                background-color: #352431;
+                color: #DDCBCA;
+                border: none;
+                border-radius: 8px;
+                font-size: 1.2em;
+                cursor: pointer;
+            }
+            footer{
+                text-align: center;
+                padding: 15px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <img src="DLLogo.png" alt = "DeadLIEner Logo">
+        </header>
+
+        <nav>
+            <a href="mainPage.html">Home</a>
+            <a href="aboutUs.html">About Us</a>
+        </nav>
+
+        <main>
+            <form action="calenderPage.html" method="get" onsubmit="return validateForm()">
+                <h1>Log In</h1>
+                <p>Enter a valid email address and your 4-digit pin number:</p>
+                <input type="text" id="email" name="username" placeholder="Enter Your Email" required>
+                <input type="text" id="passkey" name="passkey" placeholder="Enter Your Pin" required maxlength="4" pattern="\d{4}">
+                <input type="text" id="passkeyCheck" name="passkeyCheck" placeholder="Enter Your Pin Again" required maxlength="4" pattern="\d{4}">
+                <input type="submit" value="SignUp">
+
+            </form>
+        </main>
+
+        <footer>
+            <p>© 2025 DeadLIEner. All rights reserved.</p> <!-- p is a paragraph -->
+        </footer>
+    </body>
+    <script>
+        function validateForm(){
+            var email = document.getElementById("email").value;
+            var passkey = document.getElementById("passkey").value;
+            var passkeyCheck = document.getElementById("passkeyCheck").value;
+            
+            fetch('/validateEmail', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ email: email })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (!data.valid) {
+                    alert("Invalid email address!");
+                    return false;
+                }
+            });
+            if (passkey !== passkeyCheck) {
+                alert("Error: Passkey does not match. Please try again.");
+                return false; // Prevent form submission
+            }
+            return true; // Allow form submission
+        }
+    </script>
+</html>
