@@ -16,52 +16,115 @@
                 flex-direction:column;
                 font-family: 'Calibri', sans-serif;
                 background-color: #af6a6a;
+                background-image: url("IndexPage.png");
+                background-size: cover;
+                overflow-x: hidden;
                 color: #231F20;
 
             }
-            main{
-                background-image: url("Test");
-            }
-            form {
-                padding: 20px;
-                border-radius: 10px;
-                border: 2px solid #352431; 
-                display: inline-block;
-                text-align: center;
-                width: 100%;
-                max-width: 500px;
-                margin: 0 auto;
-                font-family: 'Calibri', sans-serif;
-            }
-            form input[type="submit"] {
-                width: 100%;
+            #slider {
+                position: absolute;
+                top: 30%; /* Adjust based on the actual placement */
+                left: 22%; /* Adjust this based on where the text box starts */
+                width: 55%; /* Adjust width to match the text box */
                 padding: 15px;
-                margin-top: 10px;
+                color: #352431;
+                font-size: 1.6em;
+                text-align: center;
+                border-radius: 5px;
+            }
+            p{
+                font-size: 20px;
+                font-weight:500;
+                color: #231F20;
+            }
+            .button-container {
+                position: absolute;
+                top: 45%; /* Adjust to position below the text box */
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                gap: 20px;
+            }
+            
+            .button-container form input[type="submit"] {
+                padding: 10px 20px;
+                font-size: 1.2em;
                 background-color: #352431;
                 color: #DDCBCA;
                 border: none;
-                border-radius: 8px;
-                font-size: 1.2em;
+                border-radius: 5px;
                 cursor: pointer;
             }
+            
             footer{
                 background-color:#DDCBCA;
                 color: #231F20;
                 text-align: center;
+                position:absolute;
+                bottom:0;
+                width: 100%;
                 padding: 15px;
+            }
+            .blank-space {
+                height: 300px;
+                margin: 20px 0; 
+            }
+            #fact {
+                font-style: italic;
+                color: #231F20;
             }
         </style>
     </head>
 
     <body>
-        
+        <div id=".blank-space">
+
+        </div>
+
+        <div id="slider">
+            <p id="fact">88% of workers procrastinate for at least 1 hour per day</p>
+        </div>
+
         <main>
-            <h1>test</h1>
-            <
+            <div class="button-container">
+                <form action="logIn.html" method="get">
+                    <input type="submit" value="Login">
+                </form>
+                <form action="signUp.html" method="get">
+                    <input type="submit" value="Sign Up">
+                </form>
+                <form action="aboutUs.html" method="get">
+                    <input type="submit" value="About Us">
+                </form>
+            </div>
+            
         </main>
 
         <footer>
             <p>© 2025 DeadLIEner. All rights reserved.</p> 
         </footer>
     </body>
+
+    <script>
+        const facts = [
+            "People spend, on average, 57% of their time online procrastinating",
+            "Around 80%-95% of college students, or roughly half of all students, procrastinate",
+            "Procrastination is a chronic issue for around 20% of adults",
+            "Low-quality sleep can lead to procrastination.",
+            "Procrastination is connected to negative functioning and risks to mental health", 
+            "People spend an average of 2 hours and 25 minutes per day procrastinating and over 55 days per year",
+            "75% of people consider procrastination, often fueled by technology, a personality trait or problem",
+            "There’s a strong and negative correlation between procrastination and time management"
+        ];
+
+        let currentFact = 0;
+
+        function showNextFact() {
+            currentFact = (currentFact + 1) % facts.length;
+            document.getElementById("fact").textContent = facts[currentFact];
+        }
+
+        setInterval(showNextFact, 3000);
+    </script>
 </html>

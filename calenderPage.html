@@ -108,6 +108,9 @@
                 margin-top: 10px;
                 border: none;
             }
+            footer{
+                text-align: center;
+            }
         </style>
     </head>
 
@@ -119,19 +122,21 @@
         </header>
     
         <nav>
-            <a href="mainPage.html">Home</a>
-            <a href="calenderPage.html">Calender</a> 
-            <a href="signUp.html">Sign Up</a>
-            <a href="logIn.html">Log In</a>
+            <a href="index.html">Home</a>
+            <a href="aboutUs.html">About Us</a> 
         </nav>
 
         <main>
             <h1>Tasks Calendar</h1>
             <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&showTitle=0&showTz=0&src=Y181MjcyN2Y3ZjYzYTc4ZGJiNDhhNjIxNTZmOWRjNTlmNGI5YTY5ZTJlODE0Y2M4MjJhZTgzNDhhNDY3NmNhMDIxQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y19kOTdhZmVkMDAyMzA0ZTBiYzdjMGU2YjVlMzg0MGE4YzUxZmRkYjVhMGNmMDlhYWEyZDVlOTQwZWFjODE3YTYzQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y180NWM3YjEwZGIxMTFjOGMzYTMyNGIwMGMyOGE3YjQ1YWFlMTljZWY4N2ZiMzZmNzE3NmNkOWY5MDhhNTk5YmMzQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23b50b44&color=%23352431&color=%23c38668" width="800" height="600" frameborder="0" scrolling="no"></iframe>
             <form action="javascript:void(0);" method="post" onsubmit="sendNotification()">
-                <input type="submit" value="Test">
+                <input type="submit" value="Send Notifications">
             </form>
         </main>
+
+        <footer>
+            <p>© 2025 DeadLIEner. All rights reserved.</p> <!-- p is a paragraph -->
+        </footer>
         
         <script src="notification.js"></script> <!---->
     </body>

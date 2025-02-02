@@ -68,6 +68,9 @@
                 font-size:40px;
                 font-weight:900;
             }
+            a{
+                color:#af6a6a;
+            }
             p{
                 font-size: 20px;
                 font-weight:500;
@@ -105,18 +108,19 @@
         </header>
 
         <nav>
-            <a href="mainPage.html">Home</a>
+            <a href="index.html">Home</a>
             <a href="aboutUs.html">About Us</a>
         </nav>
 
         <main>
             <form action="calenderPage.html" method="get" onsubmit="return validateForm()">
-                <h1>Log In</h1>
+                <h1>Sign Up</h1>
                 <p>Enter a valid email address and your 4-digit pin number:</p>
                 <input type="text" id="email" name="username" placeholder="Enter Your Email" required>
-                <input type="text" id="passkey" name="passkey" placeholder="Enter Your Pin" required maxlength="4" pattern="\d{4}">
-                <input type="text" id="passkeyCheck" name="passkeyCheck" placeholder="Enter Your Pin Again" required maxlength="4" pattern="\d{4}">
+                <input type="text" id="passkey" name="passkey" placeholder="Enter Your Pin" required minlength="4" maxlength="4" pattern="\d{4}">
+                <input type="text" id="passkeyCheck" name="passkeyCheck" placeholder="Enter Your Pin Again" required minlength="4" maxlength="4" pattern="\d{4}">
                 <input type="submit" value="SignUp">
+                <p>Go to <a href="logIn.html">Log In</a></p>
 
             </form>
         </main>
@@ -131,18 +135,6 @@
             var passkey = document.getElementById("passkey").value;
             var passkeyCheck = document.getElementById("passkeyCheck").value;
             
-            fetch('/validateEmail', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({ email: email })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (!data.valid) {
-                    alert("Invalid email address!");
-                    return false;
-                }
-            });
             if (passkey !== passkeyCheck) {
                 alert("Error: Passkey does not match. Please try again.");
                 return false; // Prevent form submission
