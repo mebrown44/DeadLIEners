@@ -6,23 +6,61 @@
 
         <title> DeadLIEner - Calender</title>
         <style>
+            html, body {
+                height: 100%; /* Ensure the body and html fill the viewport */
+                margin: 0; /* Remove default margin */
+            }
             body{
                 margin: 0;
+                display: flex;
+                flex-direction:column;
+                font-family: 'Calibri', sans-serif;
                 background-color: #af6a6a;
-                color: #000;
+                color: #231F20;
 
             }
             header, footer{
-                background-color:#000;
-                color: #fff;
-                padding: 15px;
+                background-color:#DDCBCA;
+                color: #231F20;
             }
             header{
-                display:block;
+                display:flex;
+                justify-content: center;
                 align-items:center;
+                padding: 40px;
             }
             header img{
+                max-width: 30%;
+                height: auto;
+            }
+            nav {
+                background-color: #352431;
+                padding: 10px;
+                text-align: center;
+            }
+            nav a {
+                margin: 0 15px; 
+                color: #DDCBCA;
+                text-decoration: none;
+                font-weight: bold;
+            } 
+            nav a:hover {
+                color: #af6a6a;
+            }
+            main {
+                flex: 1;
+                padding: 20px;
+                text-align: center;
+            }
+            h1{
                 margin: 0 auto;
+                font-size:40px;
+                font-weight:900;
+                max-width: 30%;
+            }
+            p{
+                font-weight:500;
+                color: #231F20;
             }
         </style>
     </head>
@@ -30,9 +68,21 @@
     
     <body>
 
-        <h1>Tasks Calendar</h1>
+        <header>
+            <img src="DLLogo.png" alt="DeadLIEner Logo"> 
+        </header>
+    
+        <nav>
+            <a href="mainPage.html">Home</a>
+            <a href="calenderPage.html">Calender</a> 
+            <a href="signUp.html">Sign Up</a>
+            <a href="logIn.html">Log In</a>
+        </nav>
 
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&showTitle=0&showTz=0&src=Y18wZjllYzY3NmQyYWNkMzE2YmQwZjgwYzliMTQ1YmNlNjcwYjJiOTM1YjgzOGE2NDIzMjBjYzIzZjUzMWYxZDJlQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y19mYjliODc0ZDYzZTAzNDgzZjM3MjEzNzZmNGU3Y2QxMzY4NmNlYjY1NGU5ODE5MTY1MTEyYjBiYzNhZjAzMmM4QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y183NDk5MWU0MTMxNjhjNGI2NWEyMDExNzY4ODg5ZjA4ZTUyZGRhMzI5MjYxNmQ3NDdhYzNmNmY3NjI4YTM5NjE2QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23b50b44&color=%23352431&color=%23c38668" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-
+        <main>
+            <h1>Tasks Calendar</h1>
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&showTitle=0&showTz=0&src=Y181MjcyN2Y3ZjYzYTc4ZGJiNDhhNjIxNTZmOWRjNTlmNGI5YTY5ZTJlODE0Y2M4MjJhZTgzNDhhNDY3NmNhMDIxQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y19kOTdhZmVkMDAyMzA0ZTBiYzdjMGU2YjVlMzg0MGE4YzUxZmRkYjVhMGNmMDlhYWEyZDVlOTQwZWFjODE3YTYzQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y180NWM3YjEwZGIxMTFjOGMzYTMyNGIwMGMyOGE3YjQ1YWFlMTljZWY4N2ZiMzZmNzE3NmNkOWY5MDhhNTk5YmMzQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23b50b44&color=%23352431&color=%23c38668" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        </main>
+        
     </body>
 </html>
