@@ -25,4 +25,16 @@ public class User{
 
         }
     }
+
+    public String getUsername(){
+        return username.getUserName();
+    }
+
+    protected String getPasskey(){
+        return "" + passkey;
+    }
+
+    public ArrayList<Event> getEvents(){
+        return userCalender.getEvents();
+    }
 }
