@@ -9,7 +9,7 @@ public class UserSQL {
     private static final String USER = "postgres";
     private static final String PASSWORD = "Pupp!esr0ck";
 
-    public UserSQL(String a){
+    public UserSQL(){
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD)) {
 
         } catch (SQLException e) {
@@ -59,6 +59,10 @@ public class UserSQL {
             e.printStackTrace();
         }
         return events;
+    }
+
+    public static void main (String[] args){
+        new UserSQL();
     }
 
     /*public void insertUser(User u){
